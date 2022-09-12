@@ -2,12 +2,14 @@ body {
   font-family: sans-serif;
   margin: 0;
 }
+
 section {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .main {
   display: flex;
 	justify-content: space-around;
@@ -18,10 +20,12 @@ section {
 	padding: 0;
 	background: #eb2f06;
 }
+
 .wrapper {
   position: relative;
   overflow-x: hidden;
 }
+
 .menu {
   position: fixed;
   left: 0;
@@ -37,13 +41,16 @@ section {
   transform: translateX(-100%);
   z-index: 99;
 }
+
 nav {
   margin-block-start: 1em;
   margin-block-end: 1em;
 }
+
 .menu-active {
   transform: translateX(0%);
 }
+
 .menu-list {
   margin-top: 10%;
   display: flex;
@@ -52,6 +59,7 @@ nav {
   height: 50%;
   flex-direction: column;
 }
+
 .menu-button {
   width: 50px;
   height: 50px;
@@ -62,13 +70,16 @@ nav {
   border-radius: 50%;
   border-color: transparent;
 }
+
 .content {
   z-index: 0;
   transition: 0.5s;
 }
+
 .content-active {
   transform: translateX(30%);
 }
+
 .menu-button span,
 .menu-button span::after,
 .menu-button span::before {
@@ -81,30 +92,37 @@ nav {
   margin-top: -1px;
   margin-left: -10px;
 }
+
 .menu-button span::after {
   content: '';
   transform: translateY(-5px);
   display: block;
   transition: 0.2s;
 }
+
 .menu-button span::before {
   content: '';
   transform: translateY(5px);
   display: block;
   transition: 0.2s;
 }
+
 .menu-button-active span {
   height: 0;
 }
+
 .menu-button-active span::after {
   transform: rotate(45deg);
 }
+
 .menu-button-active span::before {
   transform: rotate(-45deg);
 }
+
 .menu-element {
   width: 100%;
 }
+
 .menu-element span {
   cursor: pointer;
   -moz-user-select: none;
@@ -112,9 +130,11 @@ nav {
   -webkit-user-select: none;
   user-select: none;
 }
+
 input {
   color: #fff;
 }
+
 .numbers {
   width: 30px;
   height: 20px;
@@ -123,6 +143,7 @@ input {
   border-radius: 15%;
   text-align: center;
 }
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -130,9 +151,11 @@ ul {
   overflow: hidden;
   background-color: #333;
 }
+
 li {
   float: right;
 }
+
 li a {
   display: block;
   color: white;
@@ -140,20 +163,24 @@ li a {
   padding: 20px 16px;
   text-decoration: none;
 }
+
 li a:hover {
   background-color: #111;
 }
+
 .navigation {
   width: 100%;
   position: absolute;
   display: block;
 }
+
 .countdown {
-	display: flex;
+display: flex;
 	justify-content: center;
 	align-items: center;
   position: relative;
 }
+
 .time-section {
 	display: flex;
 	flex-direction: column;
@@ -166,18 +193,22 @@ li a:hover {
 	user-select: none;
   z-index: 100;
 }
+
 .time-section:last-child {
 	border: none;
 }
+
 .count {
 	font-size: 10em;
 }
+
 .tmr-btns {
   display: flex;
   flex-direction: row;
   position: relative;
   justify-content: center;
 }
+
 .tmr-btn {
   width: 3em;
   height: 3em;
@@ -186,15 +217,18 @@ li a:hover {
   border-color: transparent;
   background-color: #aae;
 }
+
 .test {
   width: 100px;
   height: 100px;
   background-color: #fff;
   color: black;
 }
+
 .testtime {
   color: black;
 }
+
 .invis-input {
   visibility: hidden;
 }
