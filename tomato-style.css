@@ -12,12 +12,12 @@ section {
 
 .main {
   display: flex;
-	align-items: center;
+  align-items: center;
   flex-direction: column;
-	min-height: 100vh;
-	margin: 0;
-	padding: 0;
-	background: #ee2f06;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #ee2f06;
 }
 
 .wrapper {
@@ -203,31 +203,31 @@ li a:hover {
 }
 
 .countdown {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
 
 .time-section {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	color: #fff;
-	font-family: sans-serif;
-	padding: 0 30px;
-	border-right: 1px solid #fff;
-	user-select: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: sans-serif;
+  padding: 0 30px;
+  border-right: 1px solid #fff;
+  user-select: none;
   z-index: 100;
 }
 
 .time-section:last-child {
-	border: none;
+  border: none;
 }
 
 .count {
-	font-size: 10em;
+  font-size: 10em;
 }
 
 .tmr-btns {
@@ -266,46 +266,46 @@ li a:hover {
 }
 
 input[type=checkbox]{
-	height: 0;
-	width: 0;
-	visibility: hidden;
+  height: 0;
+  width: 0;
+  visibility: hidden;
 }
 
 .check {
-	cursor: pointer;
-	text-indent: -9999px;
-	width: 40px;
-	height: 20px;
-	background: grey;
-	display: block;
-	border-radius: 10%;
-	position: relative;
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 40px;
+  height: 20px;
+  background: grey;
+  display: block;
+  border-radius: 10%;
+  position: relative;
   margin-bottom: 20px;
 }
 
 .check:after {
-	content: '';
-	position: absolute;
-	top: 5px;
-	left: 5px;
-	width: 10px;
-	height: 10px;
-	background: #fff;
-	border-radius: 10%;
-	transition: 0.3s;
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 10%;
+  transition: 0.3s;
 }
 
 .noti:checked + .check {
-	background: #bada55;
+  background: #bada55;
 }
 
 .noti:checked + .check:after {
-	left: calc(100% - 5px);
-	transform: translateX(-100%);
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
 }
 
 .check:active:after {
-	width: 20px;
+  width: 20px;
 }
 .menu-button label:hover {
   cursor: pointer;
