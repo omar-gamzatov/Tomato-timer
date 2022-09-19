@@ -12,13 +12,12 @@ section {
 
 .main {
   display: flex;
-	justify-content: space-around;
 	align-items: center;
   flex-direction: column;
 	min-height: 100vh;
 	margin: 0;
 	padding: 0;
-	background: #eb2f06;
+	background: #ee2f06;
 }
 
 .wrapper {
@@ -32,19 +31,12 @@ section {
   top: 0;
   width: 30%;
   height: 100vh;
-  display: flex;
-  justify-content: center;
   align-items: flex-start;
   background-color: #e67e22;
   color: #f3f3f3;
   transition: 0.5s;
   transform: translateX(-100%);
   z-index: 99;
-}
-
-nav {
-  margin-block-start: 1em;
-  margin-block-end: 1em;
 }
 
 .menu-active {
@@ -119,8 +111,21 @@ nav {
   transform: rotate(-45deg);
 }
 
+.menu-button:hover {
+  cursor: pointer;
+  background-color: #e67e47;
+}
+
+.menu label {
+  color: #fff;
+  margin-left: 50px;
+}
+
 .menu-element {
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .menu-element span {
@@ -129,6 +134,27 @@ nav {
   -khtml-user-select: none;
   -webkit-user-select: none;
   user-select: none;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right: 10%;
+  left: 60%;
+}
+
+.btn span {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 28px;
+}
+
+.btni {
+  justify-content: center;
+  position: absolute;
+  right: 10%;
+  left: 56%;
 }
 
 input {
@@ -149,7 +175,8 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #ee2f06;
+
 }
 
 li {
@@ -165,17 +192,18 @@ li a {
 }
 
 li a:hover {
-  background-color: #111;
+  background-color: #e67e22;
 }
 
 .navigation {
   width: 100%;
   position: absolute;
-  display: block;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .countdown {
-display: flex;
+	display: flex;
 	justify-content: center;
 	align-items: center;
   position: relative;
@@ -203,32 +231,82 @@ display: flex;
 }
 
 .tmr-btns {
+  margin-top: 20vh;
+}
+
+.tmr-btns ul {
   display: flex;
   flex-direction: row;
   position: relative;
-  justify-content: center;
+  list-style-type: none;
+  background-color: transparent;
 }
 
 .tmr-btn {
-  width: 3em;
-  height: 3em;
-  border-radius: 15%;
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background-color: #e67e22;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 16px;
+}
+
+.tmr-btn:hover {
   cursor: pointer;
-  border-color: transparent;
-  background-color: #aae;
+  background-color: #e67e47;
 }
 
-.test {
-  width: 100px;
-  height: 100px;
-  background-color: #fff;
-  color: black;
-}
-
-.testtime {
-  color: black;
+.tmr-btns ul li {
+  margin-left: 10px;
 }
 
 .invis-input {
   visibility: hidden;
+}
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+.check {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 40px;
+	height: 20px;
+	background: grey;
+	display: block;
+	border-radius: 10%;
+	position: relative;
+  margin-bottom: 20px;
+}
+
+.check:after {
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 10px;
+	height: 10px;
+	background: #fff;
+	border-radius: 10%;
+	transition: 0.3s;
+}
+
+.noti:checked + .check {
+	background: #bada55;
+}
+
+.noti:checked + .check:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+.check:active:after {
+	width: 20px;
+}
+.menu-button label:hover {
+  cursor: pointer;
 }
