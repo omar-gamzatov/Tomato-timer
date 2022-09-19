@@ -3,40 +3,33 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="tomato-style.css">
-    <title>Помидор</title>
+    <link rel="icon" href="images/tomato_icon.png">
+    <title>Метод помидора - таймер</title>
   </head>
   <body>
     <div class="wrapper">
       <div class="navigation">
         <ul>
-          <li><a href="#">Главная</a></li>
-          <li><a href="#">О преимуществах</a></li>
-          <li><a href="#">Ссылки</a></li>
+          <li><a href="https://ru.wikipedia.org/wiki/Метод_помидора" target="_blank">Статья на Wiki</a></li>
         </ul>
       </div>
       <div class="menu">
-        <button type="button" name="button" class="menu-button">
+        <button type="button" name="button" class="menu-button" id="menu-btn">
           <span></span>
+          <label for="menu-btn">ПАРАМЕТРЫ</label>
         </button>
         <nav class="menu-list">
-          <span><strong>Параметры</strong></span>
           <div class="menu-element">
-            <label for="work-id">Время работы </label><span class="minus-work-time">&minus;</span> <input type="text" name="work-time" value="25" maxlength="2" class="to-input-worktime numbers" placeholder="мин" id="work-id"><span class="plus-work-time">+</span>
+            <label for="work-id">Время работы </label><div class="btn"><span class="minus-work-time minus-btn">&minus;</span> <input type="text" name="work-time" value="25" maxlength="2" class="to-input-worktime numbers" readonly="true" id="work-id"><span class="plus-work-time">+</span></div>
           </div>
           <div class="menu-element">
-            <label for="chill-id">Время отдыха </label><span class="minus-chill">&minus;</span> <input type="text" name="chill" value="5" maxlength="2" class="to-input-chill numbers" id="chill-id"> <span class="plus-chill">+</span>
+            <label for="chill-id">Время отдыха </label><div class="btn"><span class="minus-chill minus-btn">&minus;</span> <input type="text" name="chill" value="5" readonly="true" class="to-input-chill numbers" id="chill-id"> <span class="plus-chill">+</span></div>
           </div>
           <div class="menu-element">
-            <label for="big-chill-id">Перерыв </label><span class="minus-big-chill">&minus;</span> <input type="text" name="big-chill" value="10" maxlength="2" class="to-input-bigchill numbers" id="big-chill-id"> <span class="plus-big-chill">+</span>
+            <label for="message-id">Уведомление </label><div class="btni"><input type="checkbox" id="message-id" checked class="noti"><label for="message-id" class="check"></label></div>
           </div>
           <div class="menu-element">
-            <label for="count-id">Количество помидоров </label><span class="minus-count">&minus;</span> <input type="text" name="tomato-count" value="5" maxlength="2" class="to-input-count numbers" id="count-id"> <span class="plus-count">+</span>
-          </div>
-          <div class="menu-element">
-            <label for="message-id">Уведомление </label><input type="checkbox" name="message" checked class="to-input" id="message-id">
-          </div>
-          <div class="menu-element">
-            <label for="sound-id">Звук уведомления </label><input type="checkbox" name="message-sound" checked class="to-input" id="sound-id">
+            <label for="sound-id">Звуковое уведомление </label><div class="btni"><input type="checkbox" id="sound-id" checked class="noti"><label for="sound-id" class="check"></label></div>
           </div>
           <input type="text" name="invis" value="" id="invis" class="invis-input">
         </nav>
@@ -45,22 +38,22 @@
         <section class="main">
           <div class="countdown">
             <div class="time-section">
-              <span class="count" id="minutes">00</span>
+              <span class="count" id="minutes"><script type="text/javascript">document.getElementById('minutes').innerHTML = (("0" + Math.floor(document.getElementById('work-id').value)).slice(-2));</script></span>
             </div>
             <div class="time-section">
               <span class="count" id="seconds">00</span>
             </div>
           </div>
           <div class="tmr-btns">
-            <button type="button" name="button" id="start" class="tmr-btn">Запустить таймер</button>
-            <button type="button" name="pause-btn" id="pause" class="tmr-btn">Пауза</button>
-            <button type="button" name="reset" id="reset" class="tmr-btn">Сбросить таймер</button>
+            <ul>
+              <li><button type="button" name="button" id="start" class="tmr-btn">Запустить таймер</button></li>
+              <li><button type="button" name="pause-btn" id="pause" class="tmr-btn">Пауза</button></li>
+              <li><button type="button" name="reset" id="reset" class="tmr-btn">Пропустить время</button></li>
+            </ul>
           </div>
         </section>
       </div>
     </div>
-    <footer>
-    </footer>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/myjs.js"></script>
   </body>
